@@ -9,7 +9,7 @@ class ASpell;
 class ATarget{
     public:
         virtual ~ATarget();
-        ATarget(std::string const &name);
+        ATarget(std::string const &type);
         virtual ATarget* clone() const = 0;
 
         ATarget (ATarget const &obj);
