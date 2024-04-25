@@ -20,13 +20,17 @@ ATarget::ATarget(ATarget const &other)
     *this = other;
 }
 
-ATarget &ATarget::operator=(ATarget const &other)
+ATarget &ATarget::operator=(ATarget 
+const &other)
 {
     this->_type = other._type;
     return (*this);
 }
 
-void ATarget::getHitBySpell(ASpell const &spell) const
+void ATarget::getHitBySpell(ASpell 
+const &spell) const
 {
-    std::cout << this->getType() << " has been " << spell.getEffects() << "!" << std::endl;
+    std::cout << this->getType() << 
+        " has been " << spell.getEffects() << 
+        "!" << std::endl;
 }
