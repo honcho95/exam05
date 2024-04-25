@@ -2,9 +2,14 @@
 
 ATarget::~ATarget() {}
 
-ATarget::ATarget(std::string const & type)
+ATarget::ATarget(std::string const &type)
 {
     this->_type = type;
+}
+
+std::string const &ATarget::getType() const
+{
+    return this->_type;
 }
 
 ATarget::ATarget(ATarget const &obj)
@@ -13,15 +18,10 @@ ATarget::ATarget(ATarget const &obj)
 }
 
 ATarget &ATarget::operator=(ATarget 
-const & obj)
+const &obj)
 {
     this->_type = obj._type;
     return(*this);
-}
-
-const std::string &ATarget::getType() const
-{
-    return(this->_type);
 }
 
 void ATarget::getHitBySpell(ASpell 
