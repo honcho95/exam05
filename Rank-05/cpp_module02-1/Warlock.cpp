@@ -31,12 +31,17 @@ void Warlock::learnSpell(ASpell *spell)
     sBook.learnSpell(spell);
 }
 
-void Warlock::forgetSpell(std::string const &spell){
+void Warlock::forgetSpell(std::string 
+const &spell)
+{
     sBook.forgetSpell(spell);
 }
 
-void Warlock::launchSpell(std::string const & spell, ATarget const & target){
-    ASpell *pointeur = sBook.createSpell(spell);
+void Warlock::launchSpell(std::string 
+const & spell, ATarget const & target)
+{
+    ASpell *pointeur = 
+    sBook.createSpell(spell);
     if(pointeur)
         pointeur->launch(target);
 }
