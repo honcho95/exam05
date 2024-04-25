@@ -37,27 +37,32 @@ void Warlock::learnSpell(ASpell *spell)
     vecSpell.push_back(spell);
 }
 
-void Warlock::forgetSpell(std::string spellName)
+void Warlock::forgetSpell
+(std::string spellName)
 {
     if (spellName.empty())
         return;
     size_t i = 0;
     while (i < vecSpell.size())
     {
-        if (spellName == vecSpell[i]->getName())
-            vecSpell.erase(vecSpell.begin() + i);
+        if (spellName == 
+            vecSpell[i]->getName())
+            vecSpell.erase
+                (vecSpell.begin() + i);
         i++;
     }
 }
 
-void Warlock::launchSpell(std::string spellName, ATarget const &target)
+void Warlock::launchSpell
+(std::string spellName, ATarget const &target)
 {
     if (spellName.empty())
             return;
         size_t i = 0;
         while (i < vecSpell.size())
         {
-            if (spellName == vecSpell[i]->getName())
+            if (spellName == 
+                vecSpell[i]->getName())
                 vecSpell[i]->launch(target);
             i++;
         }
