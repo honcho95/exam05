@@ -1,9 +1,6 @@
 #include "ATarget.hpp"
 
-ATarget::~ATarget()
-{
-
-}
+ATarget::~ATarget() {}
 
 ATarget::ATarget(std::string const &type)
 {
@@ -24,7 +21,7 @@ ATarget &ATarget::operator=(ATarget
 const &other)
 {
     this->_type = other._type;
-    return (*this);
+    return(*this);
 }
 
 void ATarget::getHitBySpell(ASpell 
