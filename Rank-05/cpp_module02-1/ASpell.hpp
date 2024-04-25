@@ -9,7 +9,8 @@ class ATarget;
 class ASpell{
 public:
     virtual ~ASpell();
-    ASpell(std::string const &name, std::string const &effects);
+    ASpell(std::string const &name, 
+std::string const &effects);
     virtual ASpell* clone() const = 0;
 
     ASpell (ASpell const &obj);
@@ -18,7 +19,8 @@ public:
     const std::string &getName() const;
     const std::string getEffects() const;
 
-    void launch(ATarget const &target) const;
+    void launch(ATarget const &target) 
+const;
 
 private:
         std::string _name;
