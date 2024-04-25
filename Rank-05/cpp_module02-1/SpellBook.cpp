@@ -4,7 +4,8 @@ SpellBook::SpellBook(){}
 
 SpellBook::~SpellBook(){}
 
-void SpellBook::learnSpell(ASpell* spell){
+void SpellBook::learnSpell(ASpell* spell)
+{
     if(spell)
         _spellbook.push_back(spell);
 }
