@@ -13,11 +13,13 @@ class ATarget{
         virtual ATarget* clone() const = 0;
 
         ATarget (ATarget const &obj);
-        ATarget &operator=(ATarget const &obj);
+        ATarget &operator=(ATarget 
+const &obj);
 
         const std::string &getType() const;
 
-        void getHitBySpell(ASpell const &spell) const;
+        void getHitBySpell(ASpell 
+const &spell) const;
 
     private:
         std::string _type;
