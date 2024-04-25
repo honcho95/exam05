@@ -10,16 +10,20 @@ class ASpell
 {
     public :
         virtual ~ASpell();
-        ASpell(std::string const &name, std::string const &effects);
+        ASpell(std::string const &name, 
+std::string const &effects);
         virtual ASpell* clone() const = 0;
 
         ASpell(ASpell const &other);
-        ASpell &operator=(ASpell const &other);
+        ASpell &operator=(ASpell 
+const &other);
 
         const std::string& getName() const;
-        const std::string getEffects() const;
+        const std::string getEffects() 
+const;
 
-        void launch(ATarget const &target) const;
+        void launch(ATarget const &target) 
+const;
         
     private :
       std::string _name;
